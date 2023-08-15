@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:artsay/colors.dart';
 import 'package:artsay/gradient_container.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Scaffold(
-        body: GradientContainer(),
+        body: GradientContainer(
+          [lightColorScheme.primary, lightColorScheme.tertiary],
+        ),
       ),
     ),
   );
