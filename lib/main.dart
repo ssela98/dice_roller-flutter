@@ -1,27 +1,11 @@
-import 'package:artsay/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:artsay/gradient_container.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: Scaffold(
-        body: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.bottomCenter,
-              colors: List.from(
-                [lightColorScheme.primary, lightColorScheme.tertiary],
-              ),
-            ),
-          ),
-          child: Center(
-            child: Text(
-              'Hello Ale!',
-              style: TextStyle(
-                  color: lightColorScheme.onPrimaryContainer, fontSize: 28),
-            ),
-          ),
-        ),
+        body: GradientContainer(),
       ),
     ),
   );
