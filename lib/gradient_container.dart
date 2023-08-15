@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:artsay/styled_text.dart';
 
 class GradientContainer extends StatelessWidget {
   const GradientContainer(
@@ -13,6 +12,10 @@ class GradientContainer extends StatelessWidget {
   final Alignment beginAlignment;
   final Alignment endAlignment;
 
+  void rollDice() {
+    // ...
+  }
+
   @override
   Widget build(context) {
     return Container(
@@ -23,8 +26,20 @@ class GradientContainer extends StatelessWidget {
           colors: colors,
         ),
       ),
-      child: const Center(
-        child: StyledText('Hello Ale!'),
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/images/dice-images/dice-1.png',
+              width: 200,
+            ),
+            FilledButton(
+              onPressed: rollDice,
+              child: const Text('Gamble your life!'),
+            )
+          ],
+        ),
       ),
     );
   }
