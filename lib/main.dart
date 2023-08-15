@@ -10,9 +10,7 @@ void main() {
         useMaterial3: true,
       ),
       home: Scaffold(
-        body: GradientContainer(
-          [lightColorScheme.primary, lightColorScheme.tertiary],
-        ),
+        body: GradientContainer.primaryTertiary(),
       ),
     ),
   );

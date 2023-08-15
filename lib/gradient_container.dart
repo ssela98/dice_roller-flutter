@@ -1,4 +1,6 @@
+import 'package:artsay/dice_roller.dart';
 import 'package:flutter/material.dart';
+import 'package:artsay/colors.dart';
 
 class GradientContainer extends StatelessWidget {
   const GradientContainer(
@@ -8,13 +10,14 @@ class GradientContainer extends StatelessWidget {
     super.key,
   });
 
+  GradientContainer.primaryTertiary({super.key})
+      : colors = [lightColorScheme.primary, lightColorScheme.tertiary],
+        beginAlignment = Alignment.bottomCenter,
+        endAlignment = Alignment.centerRight;
+
   final List<Color> colors;
   final Alignment beginAlignment;
   final Alignment endAlignment;
-
-  void rollDice() {
-    // ...
-  }
 
   @override
   Widget build(context) {
@@ -26,21 +29,7 @@ class GradientContainer extends StatelessWidget {
           colors: colors,
         ),
       ),
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              'assets/images/dice-images/dice-1.png',
-              width: 200,
-            ),
-            FilledButton(
-              onPressed: rollDice,
-              child: const Text('Gamble your life!'),
-            )
-          ],
-        ),
-      ),
+      child: const DiceRoller(),
     );
   }
 }
