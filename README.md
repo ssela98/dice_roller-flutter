@@ -1,4 +1,4 @@
-# Flutter Dice Roller App
+# Dice Roller Flutter App
 
 A new Flutter project following this Udemy course:
 https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/learn/lecture/37130578#overview
